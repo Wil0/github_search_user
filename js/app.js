@@ -1,1 +1,1 @@
-angular.module('GithubSearch', []);
+var app = angular.module('GithubSearch', []);
