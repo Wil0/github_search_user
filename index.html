@@ -11,8 +11,9 @@
     <title>Search GitHub Users</title>
   </head>
   <body ng-controller="GithubSearchController as ctrl">
+    <h1>Github Username Search (aka GUS)</h1><h4></h4>
     <form>
-      <input type="text" ng-model="ctrl.username">
+      Search by username <input type="text" ng-model="ctrl.username">
       <button ng-click="ctrl.doSearch()">Search</button>
     </form>
     <ul ng-repeat="user in ctrl.result.items">
