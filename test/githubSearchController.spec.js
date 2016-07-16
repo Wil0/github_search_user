@@ -4,7 +4,7 @@ describe('GithubSearchController', function() {
   var controller;
 
   beforeEach(inject(function($controller){
-    controller = $controller('GitUserSearchController');
+    controller = $controller('GithubSearchController');
   }));
 
   it('initialises with an empty search result and term', function() {

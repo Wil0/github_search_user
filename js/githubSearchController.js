@@ -1,4 +1,4 @@
-app.controller('GitUserSearchController',['GithubSearchFactory', function(GithubSearchFactory) {
+app.controller('GithubSearchController',['GithubSearchFactory', function(GithubSearchFactory) {
 
   var vm = this;
 

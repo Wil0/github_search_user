@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="GithubSearch">
   <head>
     <meta charset="utf-8">
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/githubSearchController.js"></script>
+    <script src="js/githubSearchFactory.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
     <link rel="stylesheet" type="text/css" href="css/stylesheet.css" >
     <title>Search GitHub Users</title>
   </head>
-  <body>
-    <ul>
+  <body ng-controller="GithubSearchController as ctrl">
+    <form>
+      <input type="text" ng-model="ctrl.username">
+      <button ng-click="ctrl.doSearch()">Search</button>
+    </form>
+    <ul ng-repeat="user in ctrl.result.items">
       <li>
-        <img src="https://avatars.githubusercontent.com/u/16989462?v=3"/>
-        <a href="https://api.github.com/users/Wil0">Wil0</a>
-      </li>
-      <li>
-        <img src="https://avatars.githubusercontent.com/u/16989462?v=3"/>
-        <a href="https://api.github.com/users/Wil0">Pepe</a>
+        <img ng-src="{{user.avatar_url}}"/>
+        <a href="{{user.url}}">{{user.login}}</a>
       </li>
     </ul>
   </body>
